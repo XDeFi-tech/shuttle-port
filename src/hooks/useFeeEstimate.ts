@@ -1,4 +1,4 @@
-import { TransactionMsg, useShuttle } from "@delphi-labs/shuttle";
+import { SimulateResult, TransactionMsg, useShuttle } from "@delphi-labs/shuttle";
 import { useQuery } from "@tanstack/react-query";
 
 import useWallet from "./useWallet";
@@ -16,12 +16,10 @@ export default function useFeeEstimate({ messages }: Props) {
       return null;
     }
     
-    const response = await simulate({
+    const response : SimulateResult = await simulate({
       messages,
       wallet,
     });
-
-    console.log("simulate response", response);
 
     return {
       fee: response.fee?.amount[0],

@@ -8,6 +8,9 @@ export const TERRA_MAINNET : Network = {
   chainPrefix: "terra",
   rpc: "https://multichain-nodes.astroport.fi/phoenix-1/rpc/",
   rest: "https://multichain-nodes.astroport.fi/phoenix-1/lcd/",
+  bip44: {
+    coinType: 330
+  },
   defaultCurrency: {
     coinDenom: "LUNA",
     coinMinimalDenom: "uluna",
@@ -23,6 +26,9 @@ export const TERRA_TESTNET : Network = {
   chainPrefix: "terra",
   rpc: "https://multichain-nodes.astroport.fi/pisco-1/rpc/",
   rest: "https://multichain-nodes.astroport.fi/pisco-1/lcd/",
+  bip44: {
+    coinType: 330
+  },
   defaultCurrency: {
     coinDenom: "LUNA",
     coinMinimalDenom: "uluna",

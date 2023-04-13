@@ -10,7 +10,8 @@ import {
   MobileMetamaskProvider,
   ShuttleProvider,
   TerraStationProvider,
-  XDefiProvider,
+  XDEFITerraProvider,
+  XDEFICosmosProvider,
 } from "@delphi-labs/shuttle";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -27,7 +28,7 @@ import Header from "@/components/Header";
 import "@/styles/globals.css";
 
 const providers = [
-  new XDefiProvider({
+  new XDEFITerraProvider({
     networks: [TERRA_MAINNET],
   }),
   new CosmostationProvider({
@@ -47,6 +48,13 @@ const providers = [
       TERRA_TESTNET,
       INJECTIVE_MAINNET,
       INJECTIVE_TESTNET,
+    ],
+  }),
+  
+  new XDEFICosmosProvider({
+    networks: [
+      OSMOSIS_MAINNET,
+      MARS_MAINNET,
     ],
   }),
   new MetamaskProvider({

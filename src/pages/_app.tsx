@@ -54,7 +54,6 @@ const providers = [
   new XDEFICosmosProvider({
     networks: [
       OSMOSIS_MAINNET,
-      MARS_MAINNET,
     ],
   }),
   new MetamaskProvider({
